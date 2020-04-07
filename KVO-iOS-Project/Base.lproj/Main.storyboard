@@ -40,16 +40,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atL-qT-40k">
-                                <rect key="frame" x="20" y="384" width="374" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.haze.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="atL-qT-40k">
+                                <rect key="frame" x="20" y="260.5" width="374" height="376"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="atL-qT-40k" secondAttribute="height" multiplier="1:1" id="yAD-Sv-bx5"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="atL-qT-40k" firstAttribute="centerX" secondItem="r6n-gc-NGu" secondAttribute="centerX" id="0YU-RW-qql"/>
                             <constraint firstItem="A0W-RE-3ne" firstAttribute="top" secondItem="ix0-Et-e0m" secondAttribute="top" constant="20" id="6lG-uc-Amb"/>
                             <constraint firstItem="A0W-RE-3ne" firstAttribute="leading" secondItem="ix0-Et-e0m" secondAttribute="leading" constant="20" id="M4w-yu-SUc"/>
+                            <constraint firstItem="atL-qT-40k" firstAttribute="leading" secondItem="ix0-Et-e0m" secondAttribute="leading" constant="20" id="bao-Bt-Wqe"/>
                             <constraint firstItem="ix0-Et-e0m" firstAttribute="trailing" secondItem="A0W-RE-3ne" secondAttribute="trailing" constant="20" id="cJd-Pu-bHR"/>
+                            <constraint firstItem="ix0-Et-e0m" firstAttribute="trailing" secondItem="atL-qT-40k" secondAttribute="trailing" constant="20" id="p8B-CN-1Cg"/>
+                            <constraint firstItem="atL-qT-40k" firstAttribute="centerY" secondItem="r6n-gc-NGu" secondAttribute="centerY" id="wNi-zR-dGB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ix0-Et-e0m"/>
                     </view>
@@ -78,4 +84,7 @@
             <point key="canvasLocation" x="-1060" y="-280"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sun.haze.fill" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
