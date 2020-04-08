@@ -37,8 +37,10 @@ class WelcomeViewController: UIViewController {
     }
     
     private func configureIconNameObservation(){
-        iconNameObservation = Settings.shared.observe(\.iconName, options: [.old, .new], changeHandler: { (settings, change) in
-            
+        iconNameObservation = Settings.shared.observe(\.iconName, options: [.old, .new], changeHandler: { [weak self] (settings, change) in
+            // update UI for image icon
+            guard let iconName = change.newValue else { return }
+            self?.iconImageView.image = UIImage(systemName: iconName)
         })
     }
     

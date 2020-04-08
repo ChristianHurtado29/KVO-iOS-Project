@@ -6,6 +6,12 @@
 //  Copyright © 2020 Christian Hurtado. All rights reserved.
 //
 
+struct Icon {
+    var name: String
+    var color: UIColor
+}
+
+
 import UIKit
 
 class SettingsViewController: UIViewController {
@@ -39,7 +45,6 @@ class SettingsViewController: UIViewController {
     @IBAction func sliderChanged(_ sender: UISlider) {
         let newSize = Int(sender.value) // Float to Int as our settings fontsize is an Int
         Settings.shared.fontSize = newSize
-        
     }
     
 
