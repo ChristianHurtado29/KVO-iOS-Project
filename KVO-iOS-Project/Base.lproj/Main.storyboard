@@ -7,26 +7,67 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Settings-->
         <scene sceneID="cyD-vf-0Zn">
             <objects>
-                <viewController id="ALH-YS-hLy" sceneMemberID="viewController">
+                <viewController id="ALH-YS-hLy" customClass="SettingsViewController" customModule="KVO_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="djb-sA-KWg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="80" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-Fo-xUv">
+                                <rect key="frame" x="18" y="125" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="ALH-YS-hLy" eventType="valueChanged" id="Sk2-3P-ECf"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select welcome page font size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu6-tV-044">
+                                <rect key="frame" x="20" y="64" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ug4-KV-mbR">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au3-ib-u9F">
+                                <rect key="frame" x="202" y="175" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0TD-ec-HEp" firstAttribute="trailing" secondItem="eu6-tV-044" secondAttribute="trailing" constant="20" id="0Lx-zc-6Fo"/>
+                            <constraint firstItem="ug4-KV-mbR" firstAttribute="leading" secondItem="djb-sA-KWg" secondAttribute="leading" id="J4y-iZ-lmq"/>
+                            <constraint firstItem="eu6-tV-044" firstAttribute="top" secondItem="0TD-ec-HEp" secondAttribute="top" constant="20" id="Jed-ie-ph7"/>
+                            <constraint firstItem="0TD-ec-HEp" firstAttribute="trailing" secondItem="Jau-Fo-xUv" secondAttribute="trailing" constant="20" id="SnI-Yj-XJ8"/>
+                            <constraint firstItem="0TD-ec-HEp" firstAttribute="trailing" secondItem="ug4-KV-mbR" secondAttribute="trailing" id="UUC-W2-hhn"/>
+                            <constraint firstItem="ug4-KV-mbR" firstAttribute="centerX" secondItem="djb-sA-KWg" secondAttribute="centerX" id="hgY-n5-UY7"/>
+                            <constraint firstItem="eu6-tV-044" firstAttribute="leading" secondItem="0TD-ec-HEp" secondAttribute="leading" constant="20" id="jUu-vS-ruO"/>
+                            <constraint firstItem="Jau-Fo-xUv" firstAttribute="top" secondItem="eu6-tV-044" secondAttribute="bottom" constant="40" id="jcP-8G-VBs"/>
+                            <constraint firstItem="Jau-Fo-xUv" firstAttribute="leading" secondItem="0TD-ec-HEp" secondAttribute="leading" constant="20" id="lvp-Zz-zq1"/>
+                            <constraint firstItem="Au3-ib-u9F" firstAttribute="top" secondItem="Jau-Fo-xUv" secondAttribute="bottom" constant="20" id="tbk-ge-JNZ"/>
+                            <constraint firstItem="ug4-KV-mbR" firstAttribute="centerY" secondItem="djb-sA-KWg" secondAttribute="centerY" id="tqg-xw-PTb"/>
+                            <constraint firstItem="Au3-ib-u9F" firstAttribute="centerX" secondItem="djb-sA-KWg" secondAttribute="centerX" id="yv0-oB-hAQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0TD-ec-HEp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="RDb-7k-D6z"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="RDb-7k-D6z"/>
+                    <connections>
+                        <outlet property="fontSizeLabel" destination="Au3-ib-u9F" id="3qY-4A-JZ6"/>
+                        <outlet property="pickerView" destination="ug4-KV-mbR" id="cEI-Bx-jMz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHg-l1-KpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-141" y="44"/>
+            <point key="canvasLocation" x="-142.02898550724638" y="43.526785714285715"/>
         </scene>
-        <!--Item 1-->
+        <!--Welcome-->
         <scene sceneID="G9L-MK-eru">
             <objects>
-                <viewController id="XWg-9Q-zWE" customClass="ViewController" customModule="KVO_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XWg-9Q-zWE" customClass="WelcomeViewController" customModule="KVO_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r6n-gc-NGu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +83,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.haze.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="atL-qT-40k">
                                 <rect key="frame" x="20" y="260.5" width="374" height="376"/>
+                                <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="atL-qT-40k" secondAttribute="height" multiplier="1:1" id="yAD-Sv-bx5"/>
                                 </constraints>
@@ -59,7 +101,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ix0-Et-e0m"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="IGK-dx-Etg"/>
+                    <tabBarItem key="tabBarItem" title="Welcome" id="IGK-dx-Etg"/>
+                    <connections>
+                        <outlet property="iconImageView" destination="atL-qT-40k" id="1bl-IS-6fg"/>
+                        <outlet property="welcomeLabel" destination="A0W-RE-3ne" id="JO4-hi-waL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7v-Hd-hpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

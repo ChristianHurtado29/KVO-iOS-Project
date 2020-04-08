@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WelcomeViewController.swift
 //  KVO-iOS-Project
 //
 //  Created by Christian Hurtado on 4/7/20.
@@ -10,13 +10,18 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var iconImageView: UIImageView!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        
     }
+    
 
 
 }
-
