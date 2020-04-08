@@ -58,4 +58,11 @@ extension SettingsViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return iconNames[row]
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let iconName = iconNames[row]
+        Settings.shared.iconName = iconName
+        // after setting the iconName on the Settings class the WelcomeViewController will be updated via KVO observation
+    }
+    
 }
